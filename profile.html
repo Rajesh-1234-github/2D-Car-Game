@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="profile-container">
+    <h2>👤 Player Profile</h2>
+    <p><strong>Name:</strong> RAJESH CHOWDUVADA</p>
+    <p><strong>Email:</strong> rajeshchowduvada123@gmail.com</p>
+    <p><strong>Player Info:</strong> Enthusiastic car racer, High Score Chaser</p>
+    <p><strong>Game Status:</strong> Active</p>
+    <p><strong>Achievements:</strong> High Score Champion 🏆 , 🚗🏁 Top 5 Finisher</p>
+
+    <div class="profile-actions">
+      <a href="index.html"><button class="profile-btn">🔙 Back to Game</button></a>
+      <a href="settings.html"><button class="profile-btn">⚙️ Settings</button></a>
+      <button id="logoutBtn" class="profile-btn">🔓 Logout</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

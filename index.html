@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2D Top-Down Racing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Home Page -->
+  <div id="homePage">
+    <h1>Welcome to 2D Top-Down Racing</h1>
+    <button id="startBtn">Start Game</button>
+    <div class="credit">Created by RAJESH CHOWDUVADA</div>
+  </div>
+
+  <!-- Game Page -->
+  <div id="gamePage" style="display: none;">
+    <div id="menuBar">
+      <div id="score">Score: 0</div>
+      <div id="highScore">High Score: 0</div>
+      <div id="gameTitle">🏁 Racer Rajesh</div>
+      <button id="exitBtn">Exit</button>
+      <a href="profile.html">
+        <button id="profileBtn">👤 My Profile</button>
+      </a>
+    </div>
+
+    <div id="gameArea" class="gradient">
+      <div id="playerCar">RAJESH</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("startBtn").addEventListener("click", () => {
+      document.getElementById("homePage").style.display = "none";
+      document.getElementById("gamePage").style.display = "block";
+      if (typeof startGame === "function") startGame();
+    });
+
+    document.getElementById("exitBtn").addEventListener("click", () => {
+      if (typeof gameInterval !== "undefined") clearInterval(gameInterval);
+      location.reload();
+    });
+
+    window.onload = () => {
+      const theme = localStorage.getItem("theme") || "dark";
+      const bg = localStorage.getItem("background") || "default";
+      const border = localStorage.getItem("border");
+
+      // Apply theme
+      document.body.classList.toggle("light", theme === "light");
+
+      // Apply background and border to game area
+      const gameArea = document.getElementById("gameArea");
+      gameArea.className = bg;
+      if (border === "false") {
+        gameArea.classList.add("no-border");
+      } else {
+        gameArea.classList.remove("no-border");
+      }
+    };
+  </script>
+</body>
+</html>

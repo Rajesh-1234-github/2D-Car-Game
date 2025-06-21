@@ -1,0 +1,223 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+}
+
+/* Home Page Styling */
+#homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #111;
+}
+
+#startBtn {
+  padding: 12px 24px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: #ff4444;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Game Menu Bar */
+#menuBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #222;
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+#menuBar div,
+#menuBar h2 {
+  font-family: sans-serif;
+}
+
+#menuBar button {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#menuBar button:hover {
+  background-color: #cc0000;
+}
+
+/* Game Area */
+#gameArea {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  margin: 10px auto;
+  background: linear-gradient(#222, #333);
+  overflow: hidden;
+  border: 3px solid #fff;
+}
+
+/* Player Car */
+#playerCar {
+  position: absolute;
+  bottom: 20px;
+  left: 180px;
+  width: 40px;
+  height: 70px;
+  background-color: red;
+  color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Obstacles */
+.obstacle {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* Settings Page */
+.settings-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #222;
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-family: cursive;
+  color: white;
+}
+
+.setting-group {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-group {
+  justify-content: start;
+  gap: 10px;
+}
+
+.controls-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff4444;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.button-group button:hover {
+  background-color: #cc0000;
+}
+
+/* Credit */
+.credit {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #222;
+  padding: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.profile-actions {
+  margin-top: 20px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-actions button {
+  flex: 1;
+  max-width: 160px;        /* set a common maximum */
+  min-width: 160px;        /* set a common minimum */
+  text-align: center;
+  background-color: #ff4444;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.profile-actions button:hover {
+  background-color: #cc0000;
+}
+
+body.light {
+  background-color: #f5f5f5;
+  
+}
+
+#score, #highScore, #gameTitle{
+  font-size: 18px;
+  font-weight: bold;
+}
+.profile-btn {
+  margin: 10px;
+  background-color: #ff4444;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+
+
