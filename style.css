@@ -32,13 +32,17 @@ body {
 }
 
 /* Game Menu Bar */
+
+
 #menuBar {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  background-color: #222;
-  padding: 10px;
-  font-family: sans-serif;
+  padding: 10px 16px;
+  background-color: #1f2937; /* Optional: dark background */
+  color: white;
+  gap: 10px; /* Adds spacing between items on wrap */
 }
 
 #menuBar div,

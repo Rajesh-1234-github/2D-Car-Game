@@ -29,6 +29,13 @@
     <div id="gameArea" class="gradient">
       <div id="playerCar">RAJESH</div>
     </div>
+
+    <!-- Mobile Controls -->
+<div style="position: absolute; bottom: 20px; width: 100%; display: flex; justify-content: space-around; z-index: 999;">
+  <button onclick="moveLeft()" style="padding: 20px; font-size: 20px;">⬅️</button>
+  <button onclick="moveRight()" style="padding: 20px; font-size: 20px;">➡️</button>
+</div>
+
   </div>
 
   <script src="script.js"></script>
@@ -61,6 +68,19 @@
         gameArea.classList.remove("no-border");
       }
     };
+    function moveLeft() {
+  const player = document.getElementById("playerCar");
+  const currentLeft = parseInt(window.getComputedStyle(player).left) || 0;
+  player.style.left = Math.max(0, currentLeft - 20) + "px";
+}
+
+function moveRight() {
+  const player = document.getElementById("playerCar");
+  const currentLeft = parseInt(window.getComputedStyle(player).left) || 0;
+  const maxRight = document.getElementById("gameArea").offsetWidth - player.offsetWidth;
+  player.style.left = Math.min(maxRight, currentLeft + 20) + "px";
+}
+
   </script>
 </body>
 </html>
