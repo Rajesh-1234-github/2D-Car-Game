@@ -65,7 +65,10 @@ function moveObstacles() {
       } else {
         alert("💥 Crash! Your score: " + score);
       }
-      location.reload();
+      //location.reload();
+      document.getElementById("gamePage").style.display = "none";
+     document.getElementById("homePage").style.display = "flex";
+
     }
 
     if (obsTop > 600) {

@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Splash Screen -->
+<div id="splashScreen">
+  <h1 class="splash-title">🚗 Powered by RAJESH GAMES STUDIO</h1>
+</div>
   <!-- Home Page -->
   <div id="homePage">
     <h1>Welcome to 2D Top-Down Racing</h1>
@@ -82,5 +87,13 @@ function moveRight() {
 }
 
   </script>
+  <script>
+  window.onload = () => {
+    setTimeout(() => {
+      document.getElementById("splashScreen").style.display = "none";
+      document.getElementById("homePage").style.display = "flex";
+    }, 7000);
+  };
+</script>
 </body>
 </html>
