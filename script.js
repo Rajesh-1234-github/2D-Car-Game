@@ -96,6 +96,11 @@ window.startGame = function () {
   player.style.left = playerX + "px";
   scoreDisplay.innerText = "Score: 0";
 
+  // 🧹 Remove all old obstacles
+  const oldObstacles = document.querySelectorAll(".obstacle");
+  oldObstacles.forEach(obs => obs.remove());
+
+  // 🎨 Reset car color
   const carColors = [
     "#FF5733", "#33FF57", "#3357FF", "#FF33F6",
     "#FFFF33", "#00FFFF", "#FF8C00", "#8A2BE2"
@@ -103,5 +108,8 @@ window.startGame = function () {
   const randomColor = carColors[Math.floor(Math.random() * carColors.length)];
   player.style.backgroundColor = randomColor;
 
+  // 🎮 Start game loop
+  clearInterval(gameInterval); // clear any previous interval just in case
   gameInterval = setInterval(gameLoop, 30);
 };
+
