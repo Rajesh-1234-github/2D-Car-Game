@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,8 +65,9 @@
       localStorage.setItem("background", background);
       localStorage.setItem("border", border);
 
+      sessionStorage.setItem("skipSplash", "true");
       alert("✅ Settings saved successfully!");
-      window.location.href = "index.html"; // Redirects to home page
+      window.location.href = "index.html";
     });
 
     document.getElementById("closeBtn").addEventListener("click", () => {

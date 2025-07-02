@@ -211,7 +211,7 @@ body.light {
   font-size: 18px;
   font-weight: bold;
 }
-.profile-btn {
+.profile-btn, #toggleMusicBtn {
   margin: 10px;
   background-color: #ff4444;
   color: white;
