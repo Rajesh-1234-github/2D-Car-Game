@@ -88,17 +88,19 @@ function moveObstacles() {
         alert("💥 Crash! Your score: " + score);
       }
 
-      // Go back to home and reset game
-      document.getElementById("gamePage").style.display = "none";
-      document.getElementById("homePage").style.display = "flex";
+      // Delay return to home to let alert finish
+      setTimeout(() => {
+        document.getElementById("gamePage").style.display = "none";
+        document.getElementById("homePage").style.display = "flex";
 
-      // Reset game state
-      document.querySelectorAll(".obstacle").forEach(obs => obs.remove());
-      score = 0;
-      carNumber = 1;
-      playerX = 180;
-      scoreDisplay.innerText = "Score: 0";
-      player.style.left = playerX + "px";
+        // Reset game state
+        document.querySelectorAll(".obstacle").forEach(obs => obs.remove());
+        score = 0;
+        carNumber = 1;
+        playerX = 180;
+        scoreDisplay.innerText = "Score: 0";
+        player.style.left = playerX + "px";
+      }, 100);
     }
 
     if (top > 600) {
@@ -129,10 +131,10 @@ window.startGame = function () {
   player.style.left = playerX + "px";
   scoreDisplay.innerText = "Score: 0";
 
-  // Remove any existing obstacles
+  // Remove old obstacles
   document.querySelectorAll(".obstacle").forEach(obs => obs.remove());
 
-  // Randomize car color
+  // Random player color
   const carColors = [
     "#FF5733", "#33FF57", "#3357FF", "#FF33F6",
     "#FFFF33", "#00FFFF", "#FF8C00", "#8A2BE2"
@@ -140,6 +142,6 @@ window.startGame = function () {
   const randomColor = carColors[Math.floor(Math.random() * carColors.length)];
   player.style.backgroundColor = randomColor;
 
-  clearInterval(gameInterval); // Clear previous loop if any
+  clearInterval(gameInterval);
   gameInterval = setInterval(gameLoop, 30);
 };
