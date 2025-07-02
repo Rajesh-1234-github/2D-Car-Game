@@ -24,12 +24,14 @@ document.addEventListener("keydown", (e) => {
 function createObstacle() {
   const obs = document.createElement("div");
   obs.classList.add("obstacle");
-  obs.style.left = Math.floor(Math.random() * 10) * 40 + "px";
 
+  // Set position
+  obs.style.left = Math.floor(Math.random() * 10) * 40 + "px";
+  obs.style.top = "-100px"; // ✅ Start off-screen at top
+
+  // Color and number
   const colors = ["yellow", "green", "blue", "orange", "purple", "pink", "lime", "cyan"];
   obs.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-  // Assign number and center it
   obs.innerText = carNumber++;
   obs.style.color = "black";
   obs.style.fontWeight = "bold";
